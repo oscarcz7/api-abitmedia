@@ -250,22 +250,6 @@ export default {
     return {
       message: "",
       typeM: "",
-      // paymentCreate: {
-      //   companyType: "",
-      //   document: "",
-      //   documentType: "",
-      //   fullName: "",
-      //   address: "",
-      //   mobile: "",
-      //   email: "",
-      //   reference: "",
-      //   description: "",
-      //   amount: 0,
-      //   amountWithTax: 0,
-      //   amountWithoutTax: 0,
-      //   tax: 0,
-      //   gateway: 0
-      // },
       paymentCreate: {
         companyType: "",
         document: "",
@@ -314,8 +298,7 @@ export default {
         console.log(payment);
         console.log(this.paymentCreate);
         if (payment.status === 200) {
-          this.message =
-            payment.message + " " + payment.data.url ;
+          this.message = payment.message + " " + payment.data.url;
           this.typeM = "success";
         } else {
           this.message = payment;
