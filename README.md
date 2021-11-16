@@ -18,4 +18,5 @@ $ npm run generate
 ```
 
 ## Images
-![plot](./static/Screen Shot 2021-11-16 at 10.14.46 AM.png)
+![plot](./static/img1.png)
+![plot](./static/img2.png)
