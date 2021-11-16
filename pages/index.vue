@@ -14,7 +14,7 @@
                 <label
                   for="companyType"
                   class="block text-lg font-medium text-gray-700 dark:text-gray-200"
-                  >Tipo Persona</label
+                  >Tipo Empresa</label
                 >
                 <select
                   id="companyType"
@@ -56,7 +56,7 @@
                 <label
                   for="document"
                   class="block text-lg font-medium text-gray-700 dark:text-gray-200"
-                  ># De Documento</label
+                  >Identificaion</label
                 >
                 <input
                   type="number"
@@ -267,20 +267,20 @@ export default {
       //   gateway: 0
       // },
       paymentCreate: {
-        companyType: "Persona Natural",
-        document: "1724821820",
-        documentType: "01",
-        fullName: "Abitmedia",
-        address: "Quito",
-        mobile: "0978770599",
-        email: "ocatota@gmail.com",
-        reference: "123456789A",
-        description: "Pago prueba",
-        amount: 1.12,
-        amountWithTax: 0.5,
-        amountWithoutTax: 0.5,
-        tax: 0.12,
-        gateway: 3,
+        companyType: "",
+        document: "",
+        documentType: "",
+        fullName: "",
+        address: "",
+        mobile: "",
+        email: "",
+        reference: "",
+        description: "",
+        amount: 0,
+        amountWithTax: 0,
+        amountWithoutTax: 0,
+        tax: 0,
+        gateway: 0,
       },
 
       companies: [
@@ -311,9 +311,11 @@ export default {
             progress: false,
           }
         );
+        console.log(payment);
+        console.log(this.paymentCreate);
         if (payment.status === 200) {
           this.message =
-            payment.message + " " + payment.data.url + " " + payment.data.token;
+            payment.message + " " + payment.data.url ;
           this.typeM = "success";
         } else {
           this.message = payment;
